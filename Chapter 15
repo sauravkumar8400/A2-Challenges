@@ -1,0 +1,83 @@
+EXERCISE 1
+
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x1 = x
+        self.y1 = y
+        
+p = Point()
+q = Point()
+p.x1 = 4
+p.y1 = 3
+distance = ((p.y1-q.y1)**2 + (p.x1-q.x1)**2)**0.5
+print(distance)
+
+EXERCISE 2 
+
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x1 = x
+        self.y1 = y
+
+    def reflect(self):
+        a = -1 * self.x1
+        b = self.y1
+        return Point(a, b)
+
+number = Point()
+number.x1 = 4
+number.y1 = 3
+print(number.reflect())
+
+
+EXERCISE 3
+
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x1 = x
+        self.y1 = y
+
+    def riserun(self):
+        return self.y1 // self.x1
+
+number = Point()
+number.x1 = 4
+number.y1 = 3
+print(number.riserun())
+    
+    will fail if self.x1 = 0 because cant divide by 0
+    
+EXERCISE 4 - output not what i expected
+  
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x1 = x
+        self.y1 = y
+
+    def getab(self, a):
+        gradient = (a.y1 - self.y1)/(a.x1-self.x1)
+        c = a.y1 - (gradient * a.x1)
+        return (gradient,c)
+
+print(Point(4,10).getab(Point(6,15)))
+
+    will fail if the lines are parallel
+    
+EXERCISE 5
+
+
+  
+ 
+        
