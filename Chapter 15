@@ -74,8 +74,7 @@ class Point:
 print(Point(4,10).getab(Point(6,15)))
 
     will fail if the lines are parallel
-    
-EXERCISE 5
+
 
 
   
