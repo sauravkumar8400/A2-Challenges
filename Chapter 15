@@ -56,7 +56,7 @@ print(number.riserun())
     
     will fail if self.x1 = 0 because cant divide by 0
     
-EXERCISE 4 - output not what i expected
+EXERCISE 4 
   
 class Point:
     """ Create a new Point, at coordinates x, y """
@@ -76,7 +76,46 @@ print(Point(4,10).getab(Point(6,15)))
     will fail if the lines are parallel
 
 
-
+EXERCISE 6
   
- 
-        
+class SMS:
+
+    def __init__(my_inbox):
+        my_inbox.hasbeenviewed = []
+        my_inbox.from_number = []
+        my_inbox.time_arrived = []
+        my_inbox.text_of_sms = []
+
+
+    def add_new_arrival(my_inbox, from_number, time_arrived, text_of_SMS):
+        my_inbox.from_number.append(from_number)
+        my_inbox.hasbeenviewed.append(False)
+        my_inbox.time_arrived.append(time_arrived)
+        my_inbox.text_of_sms.append(text_of_SMS)
+
+
+    def message_count(my_inbox):
+        return len(my_inbox.hasbeenviewed)
+
+
+    def get_unread_indexes(my_inbox):
+        newList = []
+        for i in range (len(my_inbox.hasbeenviewed)):
+            w = my_inbox.hasbeenviewed[i]
+            if w == False:
+                newList.append(i)
+        return newList
+
+
+    def get_message(my_inbox,i):
+        try:
+            w = my_inbox.from_number[i]
+            x = my_inbox.time_arrived[i]
+            y = my_inbox.text_of_sms[i]
+            del my_inbox.hasbeenviewed[i]
+            my_inbox.hasbeenviewed.insert(i,True)
+            tuple = (w,x,y)
+            return tuple
+        except:
+            return None
+
