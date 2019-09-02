@@ -1,0 +1,96 @@
+EXERCSISE 1
+class Rectangle:
+
+    def __init__(self, posn, w, h):
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def area(self):
+        area=self.width*self.height
+        return area
+
+x=Rectangle((0,0),10,5)
+print(x.area())
+
+EXERCISE 2
+class Rectangle:
+
+    def __init__(self, posn, w, h):
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def area(self):
+        area=self.width*self.height
+        return area
+
+    def perimetre(self):
+        sum=self.width+self.height
+        perimetre=2*sum
+        return perimetre
+
+x=Rectangle((0,0),10,5)
+print(x.perimetre())
+
+EXERCISE 3
+class Rectangle:
+
+    def __init__(self, posn, w, h):
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def area(self):
+        area=self.width*self.height
+        return area
+
+    def perimetre(self):
+        sum=self.width+self.height
+        perimetre=2*sum
+        return perimetre
+
+    def flip(self):
+        y=self.width
+        z=self.height
+        self.width=z
+        self.height=y
+        return (self.width,self.height)
+
+x=Rectangle((0,0),10,5)
+print(x.flip())
+
+EXERCISE 4
+class Rectangle:
+
+    def __init__(self, posn, w, h):
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def area(self):
+        area=self.width*self.height
+        return area
+
+    def perimetre(self):
+        sum=self.width+self.height
+        perimetre=2*sum
+        return perimetre
+
+    def flip(self):
+        y=self.width
+        z=self.height
+        self.width=z
+        self.height=y
+        return (self.width,self.height)
+
+    def contains(self,w1,h1):
+        self.width1=w1
+        self.height1=h1
+        if self.width1<self.width and self.height1<self.height:
+            return True
+        else:
+            return False
+
+x=Rectangle((0,0),10,5)
+print(x.contains(3,3))
