@@ -1,0 +1,51 @@
+import turtle
+
+# 1. Modify the Koch fractal program so that it draws a Koch snowflake, like this:
+
+def koch(t, order, size):
+    if order == 0:
+        t.forward(size)
+    else:
+        for angle in [60, -120, 60, 0]:
+            koch(t, order-1, size/3)
+            t.left(angle)
+            print("hi")
+
+def kochsnowflake(t, order, size):
+    for i in range(0,3):
+        koch(t,order,size)
+        t.right(120)
+
+# t = turtle.Turtle()
+# window = turtle.Screen()
+# kochsnowflake(t,2,300)
+# window.mainloop()
+
+# 2a. Draw a Cesaro torn line fractal, of the order given by the user. We show four different lines of orders 0,1,2,3. In this example, the angle of the tear is 10 degrees.
+
+def cesaro(t, order, size):
+    if order == 0:
+        t.forward(size)
+    else:
+        for angle in [85,-170,85,0]:
+            cesaro(t, order-1, size/3)
+            t.right(angle)
+
+# t = turtle.Turtle()
+# window = turtle.Screen()
+# t.goto(0,0)
+# cesaro(t, 3, 300)
+# window.mainloop()
+
+# b. Four lines make a square. Use the code in part a) to draw cesaro squares. Varying the angle gives interesting effects — experiment a bit, or perhaps let the user input the angle of the tear.
+
+def cesarosquare(t, order, size):
+    for i in range(0,4):
+        cesaro(t, order, size)
+        t.right(90)
+
+# t = turtle.Turtle()
+# window = turtle.Screen()
+# t.goto(0,0)
+# cesarosquare(t, 3, 300)
+# window.mainloop()
