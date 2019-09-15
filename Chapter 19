@@ -1,0 +1,13 @@
+def readposint():
+    try:
+        a = int(input("enter a positive integer "))
+        if a < 0:
+            print("The number {0} is not a valid age".format(a))
+        else:
+            return True
+
+    except:
+        print('Error, please enter a valid input')
+
+
+readposint()
