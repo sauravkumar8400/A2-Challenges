@@ -1,0 +1,41 @@
+class MyTime:
+
+    def __init__(self, hrs=0, mins=0, secs=0):
+        """ Create a MyTime object initialized to hrs, mins, secs """
+        self.hours = hrs
+        self.minutes = mins
+        self.seconds = secs
+
+    def between(self,t1,t2):
+        if self.hours>t1.hours and self.hours<t2.hours and self.hours>t1.minutes and self.hours<t2.minutes and self.hours>t1.seconds and self.hours<t2.seconds:
+            return True
+        else:
+            return False
+
+obj=MyTime(1,2,3)
+t1=MyTime(4,5,6)
+t2=MyTime(345)
+
+print(MyTime.between(obj,t1,t2))
+
+
+2.   
+class MyTime:
+
+    def __init__(self, hrs=0, mins=0, secs=0):
+        """ Create a MyTime object initialized to hrs, mins, secs """
+        self.hours = hrs
+        self.minutes = mins
+        self.seconds = secs
+
+    def between(self,t1,t2):
+        if self.hours>t1.hours and self.hours<t2.hours and self.hours>t1.minutes and self.hours<t2.minutes and self.hours>t1.seconds and self.hours<t2.seconds:
+            return True
+        else:
+            return False
+
+obj=MyTime(1,2,3)
+t1=MyTime(4,5,6)
+t2=MyTime(345)
+
+print(MyTime.between(obj,t1,t2))
