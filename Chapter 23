@@ -1,0 +1,10 @@
+# NEAT NUMBERS
+List = []
+for i in range(101,1001,1):
+    w = str(i)
+    count = 0
+    for j in w:
+        count += int(j)
+    if i % count == 0:
+        List.append(i)
+print(List)
